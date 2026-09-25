@@ -26,7 +26,7 @@ class Task:
     created_at: datetime = field(default_factory=datetime.utcnow)
 
     def mark_done(self) -> None:
-        self.status = TaskStatus.DONE
+        self.status = TaskStatus.IN_PROGRESS
 
     def start(self) -> None:
         if self.status == TaskStatus.DONE:
